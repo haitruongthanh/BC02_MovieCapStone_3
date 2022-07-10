@@ -1,0 +1,60 @@
+#movieTabs .ant-tabs-tab:hover {
+  color: #108f3e;
+}
+
+.ant-tabs-tab-active {
+  border-right: 3px solid #108f3e;
+}
+
+.tenRapPhim h4 {
+  color: #108f3e;
+  display: -webkit-box;
+  overflow: hidden;
+  font-weight: 500;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.tenRapPhim h6 {
+  color: #757575;
+  display: -webkit-box;
+  overflow: hidden;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.movieTabItemImg {
+  width: 100px;
+  height: 126px;
+}
+
+.movieTabItemContent {
+  width: 555px;
+  padding: 0 20px;
+}
+
+.movieTabItemContent h2 {
+  font-size: 18px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+  line-height: 22px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.movieTabItemContent span {
+  color: #fff;
+  display: inline-block;
+  padding: 0 5px;
+  font-size: 16px;
+  min-width: 33px;
+  background: #fb4226;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 4px;
+}

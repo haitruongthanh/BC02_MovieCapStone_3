@@ -9,4 +9,14 @@ export const movieService = {
       },
     });
   },
+  getMovieByTheater: () => {
+    return axios.get(
+      `${BASE_URL}/api/QuanLyRap/LayThongTinLichChieuHeThongRap?maNhom=GP01`,
+      {
+        headers: {
+          TokenCybersoft: TOKEN_CYBERSOFT,
+        },
+      }
+    );
+  },
 };

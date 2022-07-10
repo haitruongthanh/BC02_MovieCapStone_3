@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import _ from "lodash";
 import { movieService } from "./../../services/movieService";
+import MovieCarousel from "./MovieCarousel/MovieCarousel";
+import MovieTabs from "./MovieTabs/MovieTabs";
 
 export default function HomePage() {
   const [movieList, setMovieList] = useState([]);
@@ -19,12 +21,21 @@ export default function HomePage() {
   useEffect(() => {
     let fetchMovieList = async () => {
       let result = await movieService.getMovieList();
-      let chunkedList = _.chunk(result.data.content, 2);
-      console.log(chunkedList);
-      setMovieList(result.data.content);
+      let chunkedList = _.chunk(result.data.content, 8);
+      // console.log(chunkedList);
+      setMovieList(chunkedList);
     };
     fetchMovieList();
   }, []);
 
-  return <div>HomePage</div>;
+  return (
+    <div>
+      <div className="container mx-auto">
+        <MovieCarousel chunkedList={movieList} />
+      </div>
+      <div className="container mx-auto">
+        <MovieTabs />
+      </div>
+    </div>
+  );
 }
