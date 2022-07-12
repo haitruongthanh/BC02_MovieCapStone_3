@@ -48,7 +48,7 @@ export default function MovieDetailTab({ maPhim }) {
               return (
                 <TabPane
                   tab={
-                    <div className="text-left w-50 whitespace-nowrap overflow-hidden text-ellipsis tenRapPhim ">
+                    <div className="text-left w-60 whitespace-normal overflow-hidden text-ellipsis tenRapPhim ">
                       <h4 className="hover:text-white hover:underline">
                         {cumRapChieu.tenCumRap}
                       </h4>

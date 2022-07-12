@@ -6,8 +6,8 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
-  z-index: 1;
   position: relative;
+  z-index: 1;
 }
 
 .slider .overlay {
@@ -16,27 +16,52 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(48, 48, 48, 0.205);
+  background: rgba(48, 48, 48, 0.329);
   z-index: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: all 0.4s;
 }
 
 .slider .overlay button {
-  z-index: 8;
-  transition: all 0.3s;
+  z-index: 0;
+  transition: all 0.4s;
 }
 
 .slider:hover .overlay {
-  z-index: 5;
+  z-index: 20;
   transition: all 0.4s;
 }
 
 .slider .overlay button:hover {
   cursor: pointer;
-  transform: scale(2);
+  transform: scale(1.5);
   transition: all 0.4s;
   border: none;
   color: #f3f3f3;
+  z-index: 20;
+}
+
+.ant-carousel .slick-prev,
+.ant-carousel .slick-next,
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-next:hover {
+  font-size: 30px;
+  color: currentColor;
+}
+
+.ant-carousel .slick-prev,
+.ant-carousel .slick-prev:hover {
+  left: 20px;
+  z-index: 2;
+  color: white;
+}
+
+.ant-carousel .slick-next,
+.ant-carousel .slick-next:hover {
+  right: 20px;
+  z-index: 2;
+  color: white;
 }

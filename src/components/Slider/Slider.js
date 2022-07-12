@@ -2,10 +2,17 @@ import React, { useEffect, useState } from "react";
 import "./slider.css";
 import { Carousel } from "antd";
 import { movieService } from "./../../services/movieService";
-import { UpOutlined, PlayCircleOutlined } from "@ant-design/icons";
+import {
+  LeftOutlined,
+  PlayCircleOutlined,
+  RightOutlined,
+} from "@ant-design/icons";
+import Fancybox from "../Fancybox/Fancybox";
 
 export default function Slider() {
   const [listImg, setListImg] = useState([]);
+  console.log(listImg);
+
   useEffect(() => {
     movieService
       .getBannerMovie()
@@ -21,17 +28,28 @@ export default function Slider() {
 
   return (
     <div>
-      <Carousel>
+      <Carousel
+        dots={true}
+        arrows
+        prevArrow={<LeftOutlined />}
+        nextArrow={<RightOutlined />}
+      >
         {listImg.map((item, i) => {
           return (
-            <div className="w-full slider" key={i}>
+            <div className="w-full slider relative" key={i}>
               <div className="img">
                 <img src={item.hinhAnh} alt="" className="hinhAnh " />
-                <div className="overlay">
-                  <button className="p-5 bg-transparent rounded-full">
+              </div>
+              <div className="overlay ">
+                <Fancybox>
+                  <button
+                    className="p-5 bg-transparent rounded-full"
+                    data-fancybox="gallery"
+                    data-src="https://youtu.be/uqJ9u7GSaYM"
+                  >
                     <PlayCircleOutlined className="text-6xl text-white " />
                   </button>
-                </div>
+                </Fancybox>
               </div>
             </div>
           );
