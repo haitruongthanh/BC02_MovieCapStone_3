@@ -3,6 +3,9 @@ import _ from "lodash";
 import { movieService } from "./../../services/movieService";
 import MovieCarousel from "./MovieCarousel/MovieCarousel";
 import MovieTabs from "./MovieTabs/MovieTabs";
+import MovieNews from "./MovieNews/MovieNews";
+import MovieApp from "../../components/MovieApp/MovieApp";
+import Slider from "../../components/Slider/Slider";
 
 export default function HomePage() {
   const [movieList, setMovieList] = useState([]);
@@ -29,13 +32,20 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div>
-      <div className="container mx-auto">
+    <div className="">
+      <div className="w-full h-max">
+        <Slider />
+      </div>
+      <div className="container mx-auto py-8" id="phimDangChieu">
         <MovieCarousel chunkedList={movieList} />
       </div>
-      <div className="container mx-auto">
+      <div className="container mx-auto py-8 border ">
         <MovieTabs />
       </div>
+      <div className="container mx-auto py-8" id="tinTuc">
+        <MovieNews />
+      </div>
+      <MovieApp />
     </div>
   );
 }

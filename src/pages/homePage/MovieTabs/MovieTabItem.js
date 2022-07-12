@@ -3,7 +3,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 export default function MovieTabItem({ phimTheoRap }) {
-  // console.log("phimTheoRap", phimTheoRap);
   return (
     <div className="p-5 flex border-b">
       <img
@@ -27,7 +26,7 @@ export default function MovieTabItem({ phimTheoRap }) {
                     </p>
                     <p> ⁓ </p>
                     <h3 className="text-red-500 text-xl font-medium">
-                      {moment(item.ngayChieuGioChieu).format("HH")}h -
+                      {moment(item.ngayChieuGioChieu).format("HH")}h:
                       {moment(item.ngayChieuGioChieu).format("mm")}'
                     </h3>
                   </div>

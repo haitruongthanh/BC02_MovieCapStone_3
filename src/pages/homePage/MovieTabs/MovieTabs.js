@@ -1,4 +1,4 @@
-import { Divider, Tabs } from "antd";
+import { Tabs } from "antd";
 import "./MovieTab.css";
 import React, { useEffect, useState } from "react";
 import { movieService } from "../../../services/movieService";
@@ -48,11 +48,13 @@ export default function MovieTabs() {
               return (
                 <TabPane
                   tab={
-                    <div className="text-left w-50 whitespace-nowrap overflow-hidden text-ellipsis tenRapPhim ">
-                      <h4 className="hover:text-black hover:underline">
+                    <div className="text-left w-60 whitespace-normal text-ellipsis tenRapPhim ">
+                      <h4 className="hover:text-slate-700  whitespace-normal">
                         {cumRap.tenCumRap}
                       </h4>
-                      <h6>{cumRap.diaChi}</h6>
+                      <h6 className="whitespace-normal text-ellipsis w-56">
+                        {cumRap.diaChi}
+                      </h6>
                     </div>
                   }
                   key={index}

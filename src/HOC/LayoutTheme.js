@@ -1,14 +1,30 @@
 import React from "react";
+import FooterTheme from "../components/FooterTheme/FooterTheme";
 import HeaderTheme from "./../components/HeaderTheme/HeaderTheme";
+import { BackTop } from "antd";
+import { UpOutlined } from "@ant-design/icons";
+const style = {
+  height: 40,
+  width: 40,
+  lineHeight: "33px",
+  borderRadius: 100,
+  backgroundColor: "rgba(64, 64, 64, 0.6)",
+  color: "#fff",
+  textAlign: "center",
+  fontSize: 14,
+};
 
 export default function LayoutTheme({ Component }) {
   return (
     <div>
       <HeaderTheme />
       <Component />
-      <footer className="h-20 bg-blue-500 w-full text-center">
-        This is footer
-      </footer>
+      <FooterTheme />
+      <BackTop>
+        <div style={style}>
+          <UpOutlined />
+        </div>
+      </BackTop>
     </div>
   );
 }

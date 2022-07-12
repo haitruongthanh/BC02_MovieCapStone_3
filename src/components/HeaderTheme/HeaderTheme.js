@@ -14,10 +14,10 @@ export default function HeaderTheme() {
           <a href="/">HOME</a>
         </div>
         <div className="mx-2">
-          <a href="/">PHIM ĐANG CHIẾU</a>
+          <a href="#phimDangChieu">PHIM ĐANG CHIẾU</a>
         </div>
         <div className="mx-2">
-          <a href="/">TIN TỨC</a>
+          <a href="#tinTuc">TIN TỨC</a>
         </div>
       </div>
       <UserNav />

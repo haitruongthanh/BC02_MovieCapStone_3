@@ -1,43 +1,31 @@
 import { Card } from "antd";
-import { HeartTwoTone, PlayCircleTwoTone } from "@ant-design/icons";
 import React from "react";
 import "./movieItem.css";
 import { NavLink } from "react-router-dom";
 
 const MovieItem = ({ movie }) => (
-  <Card
-    hoverable
-    style={{
-      width: "100%",
-    }}
-    cover={<img alt={movie.biDanh} src={movie.hinhAnh} className="movieImg" />}
-    actions={[
-      <HeartTwoTone
-        twoToneColor="#eb2f96"
-        style={{
-          color: "red",
-          fontSize: "22px",
-        }}
-      />,
-      <PlayCircleTwoTone
-        style={{
-          fontSize: "22px",
-        }}
-        src={movie.trailer}
-      />,
-    ]}
-  >
-    <div className="movieTitle">
-      <span>{movie.danhGia}</span>
-      {movie.tenPhim}
-    </div>
-    <div className="movieDesc">
-      <h4>{movie.moTa}</h4>
-    </div>
-    <div className="movieDetail">
-      <NavLink to={`/detail/${movie.maPhim}`}>Xem Chi Tiết</NavLink>
-    </div>
-  </Card>
+  <NavLink to={`/detail/${movie.maPhim}`}>
+    <Card
+      hoverable
+      style={{
+        width: "100%",
+      }}
+      cover={
+        <img alt={movie.biDanh} src={movie.hinhAnh} className="movieImg" />
+      }
+    >
+      <div className="movieTitle">
+        <span>{movie.danhGia}</span>
+        {movie.tenPhim}
+      </div>
+      <div className="movieDesc">
+        <h4>{movie.moTa}</h4>
+      </div>
+      <div className="movieDetail">
+        <NavLink to={`/detail/${movie.maPhim}`}>Đặt vé</NavLink>
+      </div>
+    </Card>
+  </NavLink>
 );
 
 export default MovieItem;

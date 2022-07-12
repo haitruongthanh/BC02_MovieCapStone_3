@@ -115,7 +115,7 @@ input:focus {
   border: 1px solid #f3f3f3;
 }
 
-button {
+.bodyLogin button {
   color: #212121;
   border: none;
   box-shadow: none;
@@ -125,7 +125,7 @@ button {
   border-radius: 4px;
 }
 
-button.login_btn {
+.bodyLogin button.login_btn {
   color: #212121;
   border: none;
   box-shadow: none;
@@ -142,7 +142,7 @@ button.login_btn {
   border: 1px solid black;
 }
 
-button:hover {
+.bodyLogin button:hover {
   background-color: #7c162e;
   border: 1px solid black;
   color: #f3f3f3;

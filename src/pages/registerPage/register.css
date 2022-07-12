@@ -90,12 +90,12 @@ nav.horizontal ul li {
 
 /*-- end reset --*/
 .registerForm {
-  background: #f07167;
+  background: #adb5bd;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #f07167, #fdfcdc);
-  background: -moz-linear-gradient(to top, #f07167, #fdfcdc);
-  background: -o-linear-gradient(to top, #f07167, #fdfcdc);
-  background: linear-gradient(to top, #f07167, #fdfcdc);
+  background: -webkit-linear-gradient(to top, #adb5bd, #dee2e6);
+  background: -moz-linear-gradient(to top, #adb5bd, #dee2e6);
+  background: -o-linear-gradient(to top, #adb5bd, #dee2e6);
+  background: linear-gradient(to top, #adb5bd, #dee2e6);
   background-size: cover;
   background-attachment: fixed;
   font-family: "Roboto", sans-serif;
@@ -104,7 +104,7 @@ nav.horizontal ul li {
 .registerForm h1 {
   font-size: 3em;
   text-align: center;
-  color: #f07167;
+  color: #adb5bd;
   font-weight: 100;
   text-transform: capitalize;
   letter-spacing: 4px;
@@ -204,9 +204,9 @@ nav.horizontal ul li {
 .registerForm input[type="submit"] {
   font-size: 0.9em;
   color: #fff;
-  background: #f07167;
+  background: #adb5bd;
   outline: none;
-  border: 1px solid #f07167;
+  border: 1px solid #adb5bd;
   cursor: pointer;
   padding: 0.9em;
   -webkit-appearance: none;
@@ -222,8 +222,8 @@ nav.horizontal ul li {
   -o-transition: 0.5s all;
   -ms-transition: 0.5s all;
   transition: 0.5s all;
-  background: #fdfcdc;
-  color: #f07167;
+  background: #dee2e6;
+  color: #adb5bd;
 }
 
 .agileits-top p {
@@ -243,7 +243,7 @@ nav.horizontal ul li {
 }
 
 .agileits-top p a:hover {
-  color: #f07167;
+  color: #adb5bd;
 }
 
 /*-- //main --*/
@@ -257,7 +257,7 @@ nav.horizontal ul li {
 }
 
 .registerForm input.checkbox {
-  background: #f07167;
+  background: #adb5bd;
   cursor: pointer;
   width: 1.2em;
   height: 1.2em;
