@@ -34,21 +34,19 @@ export default function UserNav() {
     <div>
       {userInfo ? (
         <div className="buttonNav space-x-3 flex items-center">
-          <span>{userInfo?.hoTen}</span>
           <div className="w-10 rounded-full object-cover overflow-hidden">
             <img
               src={`https://i.pravatar.cc/150?u=${userInfo.taiKhoan}`}
               alt=""
             />
           </div>
-          <Space>
-            <PauseOutlined
-              style={{
-                fontSize: "22px",
-              }}
-            />
-          </Space>
-          <Button icon={<LogoutOutlined />} onClick={handleLogout}>
+          <span>{userInfo?.hoTen}</span>
+          <Button
+            icon={<LogoutOutlined />}
+            onClick={handleLogout}
+            type="text"
+            className="rounded-md hover:bg-red-200"
+          >
             Logout
           </Button>
         </div>
@@ -63,19 +61,12 @@ export default function UserNav() {
                   }}
                 />
               }
-              className="mr-3"
+              type="text"
+              className="rounded-md hover:bg-blue-200 mr-3"
             >
               Login
             </Button>
           </NavLink>
-          <Space>
-            <PauseOutlined
-              style={{
-                fontSize: "22px",
-                marginRight: "10px",
-              }}
-            />
-          </Space>
           <NavLink to="/register">
             <Button
               icon={
@@ -85,6 +76,8 @@ export default function UserNav() {
                   }}
                 />
               }
+              type="text"
+              className="rounded-md hover:bg-red-200 mr-3"
             >
               Register
             </Button>

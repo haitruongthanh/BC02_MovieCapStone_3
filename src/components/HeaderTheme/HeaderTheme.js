@@ -10,13 +10,13 @@ export default function HeaderTheme() {
         <span className="text-black-500 text-2xl font-semibold ">LOGO</span>
       </NavLink>
       <div className="nav flex ">
-        <div className="mx-2">
+        <div className="mx-2 hover:bg-red-100 px-4 py-2 rounded-md transition-all">
           <a href="/">HOME</a>
         </div>
-        <div className="mx-2">
+        <div className="mx-2 mx-2 hover:bg-red-100 px-4 py-2 rounded-md transition-all">
           <a href="#phimDangChieu">PHIM ĐANG CHIẾU</a>
         </div>
-        <div className="mx-2">
+        <div className="mx-2 mx-2 hover:bg-red-100 px-4 py-2 rounded-md transition-all">
           <a href="#tinTuc">TIN TỨC</a>
         </div>
       </div>

@@ -49,4 +49,14 @@ export const movieService = {
       },
     });
   },
+  getSeatByMovie: (param) => {
+    return axios.get(
+      `${BASE_URL}/api/QuanLyDatVe/LayDanhSachPhongVe?MaLichChieu=${param}`,
+      {
+        headers: {
+          TokenCybersoft: TOKEN_CYBERSOFT,
+        },
+      }
+    );
+  },
 };
