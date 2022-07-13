@@ -2,7 +2,7 @@ import React from "react";
 import HangGhe from "./HangGhe";
 
 export default function DanhSachGhe({ danhSachGhe }) {
-  console.log(danhSachGhe);
+  //   console.log(danhSachGhe);
   return (
     <div className="seatCharts-container mx-auto">
       <div className="front">SCREEN</div>

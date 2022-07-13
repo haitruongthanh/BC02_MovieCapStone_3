@@ -1,8 +1,9 @@
 import { userReducer } from "./userReducer";
 import { combineReducers } from "redux";
 import { createStore } from "redux";
+import { seatReducer } from "./seatReduser";
 
-export const rootReducer = combineReducers({ userReducer });
+export const rootReducer = combineReducers({ userReducer, seatReducer });
 
 const store = createStore(
   rootReducer,

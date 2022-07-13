@@ -1,11 +1,10 @@
 import React from "react";
 import {
   LogoutOutlined,
-  PauseOutlined,
   UserAddOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import { Button, message, Space } from "antd";
+import { Button, message } from "antd";
 import "./header.css";
 import { NavLink /* , useHistory */ } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";

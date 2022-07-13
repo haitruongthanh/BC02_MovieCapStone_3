@@ -42,7 +42,7 @@ export default function PurchasePage() {
         <h2>Multiplex Theatre Showing Screen 1</h2>
         <div className="demo">
           <DanhSachGhe danhSachGhe={danhSachGhe} />
-          <BookingDetails />
+          <BookingDetails thongTinPhim={thongTinPhim} />
         </div>
       </div>
     </div>
