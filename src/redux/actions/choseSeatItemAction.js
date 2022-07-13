@@ -1,4 +1,8 @@
-import { ADD_SEAT_ITEM, DEL_SEAT_ITEM } from "../constants/seatConstant";
+import {
+  ADD_SEAT_ITEM,
+  DEL_SEAT_ITEM,
+  SET_SEAT_ITEM,
+} from "../constants/seatConstant";
 
 export const addSeatToCart = (seatItem, maGhe) => {
   return {

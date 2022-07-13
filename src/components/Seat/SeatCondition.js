@@ -3,7 +3,7 @@ import React from "react";
 export default function SeatCondition() {
   return (
     <div id="legend" className="seatCharts-legend">
-      <div className="grid grid-cols-2 seatCharts-legendList text-left pb-2">
+      <div className="grid grid-cols-2 seatCharts-legendList text-left pb-2 text-white">
         <div className="seatCharts-legendItem">
           <div className="seatCharts-seat seatCharts-cell available" />
           <span className="seatCharts-legendDescription">Available</span>

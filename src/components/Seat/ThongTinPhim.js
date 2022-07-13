@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ThongTinPhim({ thongTinPhim }) {
   return (
-    <div className="thongTinPhim bg-blue-100">
+    <div className="thongTinPhim bg-blue-100 rounded">
       <h4 className="font-semibold my-3 text-black text-center uppercase ">
         Thông tin phim
       </h4>

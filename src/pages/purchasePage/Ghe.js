@@ -1,36 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addSeatToCart } from "../../redux/actions/choseSeatItemAction";
 
 export default function Ghe({ ghe }) {
   //   console.log(ghe);
-  const [tinhTrangGhe, setTinhTrangGhe] = useState("");
-  const [index, setIndex] = useState();
-  console.log(index);
+  const [tinhTrangGhe, setTinhTrangGhe] = useState("available");
   let dispatch = useDispatch();
-  let seatCart = useSelector((state) => state.seatReducer.seatCart);
 
   useEffect(() => {
     if (ghe.daDat) {
       setTinhTrangGhe("unavailable");
     } else if (ghe.loaiGhe === "Vip") {
       setTinhTrangGhe("vip");
-    } else {
-      setTinhTrangGhe("available");
     }
   }, []);
-
-  let renderSeatSelected = (maGhe) => {
-    let a = seatCart.findIndex((item) => {
-      return item.maGhe === maGhe;
-    });
-
-    setIndex(a);
-
-    /* if (index !== -1) {
-      setTinhTrangGhe("selected");
-    } */
-  };
 
   return (
     <div className={`seatCharts-seat seatCharts-cell ` + tinhTrangGhe}>
@@ -40,7 +23,6 @@ export default function Ghe({ ghe }) {
         id={`btn-${ghe.stt}`}
         onClick={() => {
           dispatch(addSeatToCart(ghe, ghe.maGhe));
-          renderSeatSelected(ghe.maGhe);
         }}
       ></button>
     </div>

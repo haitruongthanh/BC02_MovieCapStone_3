@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Payment from "../../components/Seat/Payment";
 import SeatCondition from "../../components/Seat/SeatCondition";
 import ThongTinPhim from "../../components/Seat/ThongTinPhim";
 import { delSeatFromCart } from "../../redux/actions/choseSeatItemAction";
@@ -64,11 +65,7 @@ export default function BookingDetails({ thongTinPhim }) {
           </div>
         </div>
       </div>
-      <div className="payment text-center py-4">
-        <button className="bg-red-300 px-7 py-2 uppercase font-semibold text-lg text-red-800 rounded-md hover:bg-red-800 hover:text-white transition-all">
-          Thanh toán
-        </button>
-      </div>
+      <Payment />
     </div>
   );
 }

@@ -1,7 +1,9 @@
 import { ADD_SEAT_ITEM, DEL_SEAT_ITEM } from "../constants/seatConstant";
+import { SET_SEAT_ITEM } from "./../constants/seatConstant";
 
 const initialState = {
   seatCart: [],
+  seatCondition: "available",
 };
 
 export const seatReducer = (state = initialState, { type, payload, maGhe }) => {
