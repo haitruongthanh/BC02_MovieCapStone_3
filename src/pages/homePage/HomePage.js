@@ -6,9 +6,12 @@ import MovieTabs from "./MovieTabs/MovieTabs";
 import MovieNews from "./MovieNews/MovieNews";
 import MovieApp from "../../components/MovieApp/MovieApp";
 import Slider from "../../components/Slider/Slider";
+import { useDispatch } from "react-redux";
+import { setSpinnerLoading } from "./../../redux/actions/spinnerAction";
 
 export default function HomePage() {
   const [movieList, setMovieList] = useState([]);
+  let dispatch = useDispatch();
   // console.log("movieList", movieList);
   /* useEffect(() => {
     movieService
@@ -22,10 +25,11 @@ export default function HomePage() {
   }); */
 
   useEffect(() => {
+    dispatch(setSpinnerLoading(true));
     let fetchMovieList = async () => {
       let result = await movieService.getMovieList();
       let chunkedList = _.chunk(result.data.content, 8);
-      // console.log(chunkedList);
+      dispatch(setSpinnerLoading(false));
       setMovieList(chunkedList);
     };
     fetchMovieList();

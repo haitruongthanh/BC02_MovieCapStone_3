@@ -11,7 +11,7 @@ import Fancybox from "../Fancybox/Fancybox";
 
 export default function Slider() {
   const [listImg, setListImg] = useState([]);
-  console.log(listImg);
+  // console.log(listImg);
 
   useEffect(() => {
     movieService
@@ -19,7 +19,7 @@ export default function Slider() {
       .then((res) => {
         // console.log("res", res);
         setListImg(res.data.content);
-        console.log(listImg);
+        // console.log(listImg);
       })
       .catch((err) => {
         console.log("err", err);

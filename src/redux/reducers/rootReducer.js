@@ -2,8 +2,13 @@ import { userReducer } from "./userReducer";
 import { combineReducers } from "redux";
 import { createStore } from "redux";
 import { seatReducer } from "./seatReduser";
+import { spinnerReducer } from "./spinnerReducer";
 
-export const rootReducer = combineReducers({ userReducer, seatReducer });
+export const rootReducer = combineReducers({
+  userReducer,
+  seatReducer,
+  spinnerReducer,
+});
 
 const store = createStore(
   rootReducer,

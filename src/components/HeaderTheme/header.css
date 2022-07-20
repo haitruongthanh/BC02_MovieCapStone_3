@@ -4,3 +4,9 @@
 a:hover {
   color: #ac173c;
 }
+
+.headerPage {
+  background: #dbe6f6;
+  background: -webkit-linear-gradient(to right, #c5796d, #dbe6f6);
+  background: linear-gradient(to right, #c5796d, #dbe6f6);
+}

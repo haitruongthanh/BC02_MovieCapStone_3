@@ -3,6 +3,8 @@ import FooterTheme from "../components/FooterTheme/FooterTheme";
 import HeaderTheme from "./../components/HeaderTheme/HeaderTheme";
 import { BackTop } from "antd";
 import { UpOutlined } from "@ant-design/icons";
+import SpinnerComponent from "../components/Spinner/SpinnerComponent";
+
 const style = {
   height: 40,
   width: 40,
@@ -17,6 +19,7 @@ const style = {
 export default function LayoutTheme({ Component }) {
   return (
     <div>
+      <SpinnerComponent />
       <HeaderTheme />
       <Component />
       <FooterTheme />
